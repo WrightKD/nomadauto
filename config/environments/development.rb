@@ -50,6 +50,7 @@ Rails.application.configure do
 
   # letter opener for email sending/recieving
   config.action_mailer.delivery_method = :letter_opener
+  config.action_mailer.perform_deliveries = true
 
   # Mailer settings to configure the Mailgun environment settings
   # SMTP settings for gmail

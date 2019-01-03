@@ -23,7 +23,7 @@ class User < ActiveRecord::Base
     before_create :create_activation_digest
     validates :name, presence: true, length: { maximum: 50 }
     VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
-    #VALID_SUBDOMAIN_REGEX = /\A[a-z]*\z/
+    VALID_SUBDOMAIN_REGEX = /\A[a-z]*\z/
 
     before_save  :downcase_email
     before_save  :downcase_subdomain
@@ -34,8 +34,8 @@ class User < ActiveRecord::Base
                   uniqueness: { case_sensitive: true }
 
     validates :subdomain, presence: true, uniqueness: { case_sensitive: true },
-                  length: { maximum: 255 }
-                  #format: { with: VALID_SUBDOMAIN_REGEX }
+                  length: { maximum: 255 },
+                  format: { with: VALID_SUBDOMAIN_REGEX }
 
 
     has_secure_password

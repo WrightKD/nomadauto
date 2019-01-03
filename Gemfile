@@ -94,7 +94,7 @@ group :development, :test do
   gem 'byebug', platform: :mri
 
   # Gem letter opener to avoid sending emails
-  gem "letter_opener"
+  gem "letter_opener", :group => :development
 
    # TDD
   gem 'rspec-rails', ">= 2.0.0.beta"
