@@ -27,3 +27,13 @@
 /server.crt
 /server.key
 /nomadagile.csr
+
+# ignore db creds
+config/database.yml
+
+# ignore ds store
+.DS_Store
+
+# ignore assetts
+public/assets/**
+

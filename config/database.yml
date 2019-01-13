@@ -10,10 +10,11 @@ development:
 test: &TEST
   adapter: postgresql
   encoding: utf8
-  database: project_test
+  database: postgres_test
   pool: 5
-  username: 
-  password:
+  username: postgres
+  password: m1710spxD
+  host: localhost
 
 production:
   adapter: postgresql
