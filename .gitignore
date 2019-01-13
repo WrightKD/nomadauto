@@ -35,6 +35,3 @@ config/cable.yml
 # ignore ds store
 .DS_Store
 
-# ignore assetts
-public/assets/**
-
